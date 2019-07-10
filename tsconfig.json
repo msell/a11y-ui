@@ -2,8 +2,11 @@
     "compilerOptions": {
       "outDir": "build",
       "target": "es5",
-      "module": "umd",
-      "lib": ["es2015", "dom"],
+      "module": "esnext",
+      "pretty": true,
+      "strict": true,
+      "removeComments": true,
+      "lib": ["esnext", "dom"],
       "sourceMap": true,
       "allowJs": false,
       "jsx": "react",
@@ -14,9 +17,12 @@
       "noImplicitThis": true,
       "noImplicitAny": true,
       "strictNullChecks": true,
+      "stripInternal": true,
       "suppressImplicitAnyIndexErrors": true,
       "noUnusedLocals": true,
-      "noUnusedParameters": true
+      "noUnusedParameters": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true
     },
     "include": ["src"],
     "exclude": ["node_modules", "build", "dist", "**/*.stories.tsx"]
