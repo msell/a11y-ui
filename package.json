@@ -11,7 +11,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest",
-    "dev": "npm run lint && tsc -m esnext --outDir dist",
+    "dev": "npm run lint && tsc --outDir dist",
     "build": "npm run clean && npm run dev",
     "ubuild": "npm run clean && npm run dev && uglifyjs ./dist/index.js -o ./dist/index.min.js",
     "storybook": "start-storybook -p 6006",

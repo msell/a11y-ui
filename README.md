@@ -1,16 +1,8 @@
-# PeopleMedia Design System
+# A11y UI Library
 
-UI component library designed for PeopleMedia.
+UI component library designed for Accessibility.
 
 This library builds on top of [Reakit](https://reakit.io/).  Reakit was built with accessibility and customization in mind.
-
-**Why is this a seperate project versus just part of the PMWeb_React codebase?**
-
-- Creating it as its own libraries frees us from having to rely on specific versions of dependcies that the app code base uses.
-- better typescript support (currently theming is mostly ejcted from ts <any>)
-- It is easier to create a living style guide (Storybook) to develop and demonstrate the components in isolation.
-- Code reuse.  Jason was already talking about a second app that could potentially leverage this UI framework.
-- Oppertunity to restructure theme schema to better suit PM
 
 ** Getting Started with development **
 
@@ -18,11 +10,6 @@ This library builds on top of [Reakit](https://reakit.io/).  Reakit was built wi
 npm install
 npm run storybook
 ```
-
-** TODOs **
-- migrate from rollup to webpack (rollup is having issues with some node_modules and alias is weird)
-- react-testing-library
-- how are we going to ensure a11y? a11y lint or perhaps react-testing-library?
 
 The benefit to using a JavaScript file for the .eslintrc file (instead of a JSON file) as it supports comments that can be used to better describe rules.
 
