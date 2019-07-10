@@ -1,4 +1,4 @@
-export enum fontSize {
+export const enum fontSize {
   xxxsmall = 11,
   xxsmall = 12,
   xsmall = 14,

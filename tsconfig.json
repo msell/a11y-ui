@@ -3,6 +3,10 @@
       "outDir": "build",
       "target": "es5",
       "module": "esnext",
+      "baseUrl": "./",
+      "paths": {
+        "a11y-ui": ["src/"]
+      },
       "pretty": true,
       "strict": true,
       "removeComments": true,
@@ -24,6 +28,6 @@
       "esModuleInterop": true,
       "allowSyntheticDefaultImports": true
     },
-    "include": ["src"],
+    "include": ["src", "types"],
     "exclude": ["node_modules", "build", "dist", "**/*.stories.tsx"]
   }
