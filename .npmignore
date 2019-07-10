@@ -1,0 +1,12 @@
+.*
+**/tsconfig.json
+**/nodemon.json
+**/tslint.json
+**/webpack.config.ts
+**/jest.config.js
+**/.pretteirrc.js
+**/.eslintrc.js
+.sotrybook
+.vscode
+storyboook-static
+src
