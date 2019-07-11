@@ -7,7 +7,6 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 import { eggplant, black } from "@Themes/index";
 import { Global } from "@emotion/core";
-import { ThemeProvider } from "emotion-theming";
 import { StoryWrapper } from "./components/StoryWrapper";
 const GlobalStyle = () => <Global styles={{
   body: {
