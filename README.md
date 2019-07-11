@@ -2,6 +2,7 @@
 
 UI component library designed for Accessibility.
 
+[Demo](https://msell.github.io/a11y-ui/?path=/story/themes--palettes)
 
 ```
 npm install a11y-ui --save

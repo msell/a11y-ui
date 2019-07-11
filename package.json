@@ -16,6 +16,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "clean": "rimraf dist",
     "test": "tsdx test",
     "prebuild": "npm run lint && npm run clean",
@@ -40,6 +41,7 @@
     "@storybook/addon-storysource": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
