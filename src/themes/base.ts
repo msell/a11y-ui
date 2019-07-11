@@ -7,6 +7,10 @@ import {
 
 import { IButtonSizes } from "../index";
 import { ITheme } from "../types/ITheme";
+
+// interface SizeProps {
+//   size?: "small" | "medium" | "large"
+// }
 // const space = {
 //     none: 0,
 //     xsmall: 4,
