@@ -7,12 +7,12 @@ const Container = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;
-  margin: 5px;
+  padding: 10px;
 `;
 
 const Row = styled.div`
   margin: 5px;
+  text-align: center;
 `;
 
 export const Palette = withTheme((props: any) => {
@@ -22,7 +22,7 @@ export const Palette = withTheme((props: any) => {
     <Container>
       {Object.entries(palette).map(([key, value]: any) => (
         <Row key={key}>
-          <div style={{ textAlign: "center" }}>{key}</div>
+          {key}
 
           <div
             style={{
