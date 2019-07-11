@@ -1,3 +1,4 @@
+import React from "react";
 import { configure } from "@storybook/react";
 import { setAddon, addDecorator } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
@@ -6,6 +7,15 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 import { eggplant, black } from "@Themes/index";
 import { withThemesProvider } from "storybook-addon-emotion-theme";
+import { Global } from "@emotion/core";
+
+const GlobalStyle = () => <Global styles={{
+  body: {
+    fontFamily: "system-ui",
+    boxSizing: "border-box",
+    fontWeight: 400
+  }
+}} />
 
 addDecorator(withThemesProvider([eggplant, black]))
 addDecorator(withInfo);
@@ -18,5 +28,14 @@ const req = require.context("../src", true, /.stories.tsx$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
+
+const withGlobal = (cb) => (
+  <React.Fragment>
+    <GlobalStyle />
+    {cb()}
+  </React.Fragment>
+);
+
+addDecorator(withGlobal);
 
 configure(loadStories, module);
