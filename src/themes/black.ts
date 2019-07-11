@@ -3,7 +3,7 @@ import {
   transparentize,
 } from "polished";
 
-import { fontSize, ITheme } from "../index";
+import { ITheme } from "../index";
 import { grays, colors, buttonSizes } from "./base";
 
 export const semanticColors = {
@@ -53,7 +53,7 @@ export const theme: ITheme = {
         backgroundColor: "#222", // but this is showing how we could do one off on specific component
       },
       size: buttonSizes.medium,
-      fontSize: fontSize.xlarge,
+      fontSize: 24,
       disabled: false,
       inverse: false,
       minimal: false,

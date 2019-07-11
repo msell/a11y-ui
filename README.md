@@ -2,6 +2,8 @@
 
 UI component library designed for Accessibility.
 
+TODO: FIX this https://github.com/Microsoft/TypeScript/issues/5243
+
 This library builds on top of [Reakit](https://reakit.io/).  Reakit was built with accessibility and customization in mind.
 
 ** Getting Started with development **

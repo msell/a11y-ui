@@ -5,7 +5,7 @@ import {
 
 // import { ITheme } from "../index";
 
-import { IButtonSizes, fontSize } from "../index";
+import { IButtonSizes } from "../index";
 import { ITheme } from "../types/ITheme";
 // const space = {
 //     none: 0,
@@ -196,7 +196,7 @@ export const theme: ITheme = {
         backgroundColor: semanticColors.secondary1,
       },
       size: buttonSizes.medium,
-      fontSize: fontSize.xlarge,
+      fontSize: 24,
       disabled: false,
       inverse: false,
       minimal: false,

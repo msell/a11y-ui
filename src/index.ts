@@ -9,7 +9,6 @@ export { Tabbable } from "reakit/Tabbable";
 export { useDialogState, Dialog, DialogDisclosure } from "reakit/Dialog";
 export { IButtonSizes, IButtonStyle } from "./types/IButtonSizes";
 export { ISemanticColors } from "./types/ISemanticColors";
-export { IFontSizes, fontSize } from "./types/IFontSizes";
 export { IComponents } from "./types/IComponents";
 export { IButton } from "./types/IButton";
 export { ITheme } from "./types/ITheme";

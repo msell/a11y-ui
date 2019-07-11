@@ -1,4 +1,4 @@
-import { IButtonStyle, fontSize } from "../index";
+import { IButtonStyle } from "../index";
 import { ITwoTone } from "./ITwoTone";
 export interface IButton {
   disabled: boolean;
@@ -6,5 +6,5 @@ export interface IButton {
   inverse: boolean;
   size: IButtonStyle;
   colors: ITwoTone;
-  fontSize: fontSize;
+  fontSize: number;
 }
