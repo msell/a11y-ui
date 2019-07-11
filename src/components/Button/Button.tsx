@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Button as Base } from "reakit/Button";
 import styled from "@emotion/styled";
-import { purple as defaultTheme } from "../../themes/index";
 import { lighten, darken } from "polished";
 import { ITheme } from "../../index";
 import { withTheme } from "emotion-theming";
@@ -57,7 +56,3 @@ export const Button = withTheme((props: IButtonProps & typeof Base) => {
   // TODO: font-family
   return <StyledButton {...props}>{props.children}</StyledButton>;
 });
-
-Button.defaultProps = {
-  theme: defaultTheme,
-};
