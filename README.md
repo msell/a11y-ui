@@ -2,7 +2,11 @@
 
 UI component library designed for Accessibility.
 
-TODO: FIX this https://github.com/Microsoft/TypeScript/issues/5243
+```
+npm install a11y-ui --save
+```
+
+[Example Usage](https://codesandbox.io/s/a11y-ui-tlnml)
 
 This library builds on top of [Reakit](https://reakit.io/).  Reakit was built with accessibility and customization in mind.
 
