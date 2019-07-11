@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { Palette } from "./styleguide/Palette";
-import { eggplant, black } from "./";
+
 storiesOf("Themes", module).add("palettes", () => (
   <div
     style={{
@@ -10,7 +10,6 @@ storiesOf("Themes", module).add("palettes", () => (
       justifyContent: "space-around",
     }}
   >
-    <Palette theme={eggplant} />
-    <Palette theme={black} />
+    <Palette />
   </div>
 ));

@@ -6,9 +6,9 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 import { eggplant, black } from "@Themes/index";
-import { withThemesProvider } from "storybook-addon-emotion-theme";
 import { Global } from "@emotion/core";
-
+import { ThemeProvider } from "emotion-theming";
+import { StoryWrapper } from "./components/StoryWrapper";
 const GlobalStyle = () => <Global styles={{
   body: {
     fontFamily: "system-ui",
@@ -17,7 +17,6 @@ const GlobalStyle = () => <Global styles={{
   }
 }} />
 
-addDecorator(withThemesProvider([eggplant, black]))
 addDecorator(withInfo);
 addDecorator(withA11y);
 addDecorator(withKnobs);
@@ -38,4 +37,18 @@ const withGlobal = (cb) => (
 
 addDecorator(withGlobal);
 
+const withThemes = (cb) => (
+  <React.Fragment>
+  <StoryWrapper theme={eggplant}>
+    {cb()}
+    </StoryWrapper>
+
+  <StoryWrapper theme={black}>
+    {cb()}
+    </StoryWrapper>
+  </React.Fragment>
+);
+
+addDecorator(withThemes);
+addDecorator(withGlobal);
 configure(loadStories, module);
