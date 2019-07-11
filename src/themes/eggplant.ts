@@ -46,7 +46,7 @@ export let semanticColors = {
 };
 
 export const theme: ITheme = {
-  name: "Purple",
+  name: "Eggplant",
   palette: semanticColors,
   components: {
     button: {

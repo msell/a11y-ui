@@ -12,5 +12,5 @@ export { ISemanticColors } from "./types/ISemanticColors";
 export { IComponents } from "./types/IComponents";
 export { IButton } from "./types/IButton";
 export { ITheme } from "./types/ITheme";
-export { purple, black } from "./themes";
+export { eggplant, black } from "./themes";
 export { ThemeProvider, withTheme } from "emotion-theming";

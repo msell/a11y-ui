@@ -4,10 +4,10 @@ import JSXAddon from "storybook-addon-jsx";
 import { withKnobs } from "@storybook/addon-knobs";
 import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
-import { purple, black } from "@Themes/index";
+import { eggplant, black } from "@Themes/index";
 import { withThemesProvider } from "storybook-addon-emotion-theme";
 
-addDecorator(withThemesProvider([purple, black]))
+addDecorator(withThemesProvider([eggplant, black]))
 addDecorator(withInfo);
 addDecorator(withA11y);
 addDecorator(withKnobs);

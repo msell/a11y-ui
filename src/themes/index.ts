@@ -1,2 +1,2 @@
-export { theme as purple } from "./purple";
+export { theme as eggplant } from "./eggplant";
 export { theme as black } from "./black";
