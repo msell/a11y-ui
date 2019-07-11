@@ -30,18 +30,18 @@ import { ITheme } from "../types/ITheme";
 //     xxxlarge: 64
 // };
 
-export enum fontSizes {
-  xxxsmall = 11,
-  xxsmall = 12,
-  xsmall = 14,
-  small = 16,
-  medium = 18,
-  large = 20,
-  xlarge = 24,
-  xxlarge = 28,
-  xxxlarge = 32,
-  xxxxlarge = 36,
-}
+// export enum fontSizes {
+//   xxxsmall = 11,
+//   xxsmall = 12,
+//   xsmall = 14,
+//   small = 16,
+//   medium = 18,
+//   large = 20,
+//   xlarge = 24,
+//   xxlarge = 28,
+//   xxxlarge = 32,
+//   xxxxlarge = 36,
+// }
 
 // const fontVariants = () => [
 //     {
