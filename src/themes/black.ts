@@ -17,7 +17,7 @@ export const semanticColors = {
   functional1: "#61ad45",
   functional2: "#ff3e41",
 
-  ctaPrimary: colors.blue,
+  ctaPrimary: "#222",
   ctaSecondary: transparentize(0.95, colors.purple), // hover color
 
   focusPrimary: transparentize(0.88, "#55307f"),
