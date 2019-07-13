@@ -9,7 +9,7 @@ const Example = () => {
 
   return (
     <>
-      <Checkbox id={id} label="Do you have a 🐈?" checked={checked} onChange={toggle} />
+      <Checkbox id={id} label="Do you have any pets?" checked={checked} onChange={toggle} />
     </>
   );
 };
