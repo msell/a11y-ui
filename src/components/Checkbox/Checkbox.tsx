@@ -49,7 +49,11 @@ export const Checkbox = withTheme((props: CheckboxHTMLProps & ICheckboxProps) =>
       <Base {...checkbox} {...props} as={StyledBox}>
         {checkbox.state && <Icon theme={props.theme} />}
       </Base>
-      {props.label && <Label htmlFor={props.id}>{props.label}</Label>}
+      {props.label && (
+        <Label onClick={() => checkbox.setState(!checkbox.state)} htmlFor={props.id}>
+          {props.label}
+        </Label>
+      )}
     </Container>
   );
 });
