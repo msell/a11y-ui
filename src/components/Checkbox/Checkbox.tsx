@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Checkbox as Base, CheckboxHTMLProps, useCheckboxState } from "reakit/Checkbox";
+import { Checkbox as Base, CheckboxHTMLProps } from "reakit/Checkbox";
 import styled from "@emotion/styled";
-// import { css } from "@emotion/core";
 import { ITheme } from "../../index";
 import { withTheme } from "emotion-theming";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -10,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // using deep import here because tree shaking does not seem to be working
 import { faCheck } from "@fortawesome/free-solid-svg-icons/faCheck";
 library.add(faCheck);
+import shortid from "shortid";
 
 export interface ICheckboxProps {
   theme: ITheme;
@@ -22,13 +22,14 @@ const Icon = ({ theme, ...props }: any): JSX.Element => (
 );
 
 export const Checkbox = withTheme((props: CheckboxHTMLProps & ICheckboxProps) => {
-  const checkbox = useCheckboxState({ state: props.checked });
+  // const checkbox = useCheckboxState({ state: props.checked });
+  const [lblId] = React.useState(shortid.generate());
   const StyledBox = styled.div`
     display: flex;
     width: 1rem;
     height: 1rem;
     border: 3px solid ${props.theme.palette.ctaPrimary};
-    background: ${checkbox.state === true ? props.theme.palette.ctaPrimary : undefined};
+    background: ${props.checked === true ? props.theme.palette.ctaPrimary : undefined};
     border-radius: 5px;
     padding: 10px;
     transition: all 150ms;
@@ -46,11 +47,11 @@ export const Checkbox = withTheme((props: CheckboxHTMLProps & ICheckboxProps) =>
   `;
   return (
     <Container>
-      <Base {...checkbox} {...props} as={StyledBox}>
-        {checkbox.state && <Icon theme={props.theme} />}
+      <Base aria-labelledby={lblId} {...props} as={StyledBox}>
+        {props.checked && <Icon theme={props.theme} />}
       </Base>
       {props.label && (
-        <Label onClick={() => checkbox.setState(!checkbox.state)} htmlFor={props.id}>
+        <Label id={lblId} onClick={props.onChange} htmlFor={props.id}>
           {props.label}
         </Label>
       )}
